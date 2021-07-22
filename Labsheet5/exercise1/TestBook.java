@@ -1,4 +1,5 @@
-package Labsheet4.exercise5;
+package Labsheet5.exercise1;
+import Labsheet3.exercise1.Computer;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,12 +22,18 @@ public class TestBook {
 
         output += "\n\nCalling the multi-argument Book constructor. The second Book object details are: \n\n" + b2.toString();*/
 
+        /* Adding this code to test public and package access
+        Computer c1 = new Computer();
+
+        System.out.println(c1.getManufacturer());
+            */
+
         String title = JOptionPane.showInputDialog("Please enter the title of your favourite book");
         double price = Double.parseDouble(JOptionPane.showInputDialog("Please enter the price of your favourite book"));
         String isbn = JOptionPane.showInputDialog("Please enter the ISBN of your favourite book");
         int pages = Integer.parseInt(JOptionPane.showInputDialog("Please enter the number of pages in your favourite book"));
 
-       
+
         Book favouriteBook = new Book(title,price,isbn,pages);
 
         output += String.format("\n\n%-25s%-9.2f%-15s%d",favouriteBook.getTitle(),favouriteBook.getPrice(),favouriteBook.getISBN(),

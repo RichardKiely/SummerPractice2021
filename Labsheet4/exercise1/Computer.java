@@ -1,4 +1,4 @@
-package Labsheet4;
+package Labsheet4.exercise1;
 
 /*Computer class is an instantiable class as we will create an object and call
 an instance of this class in our main  (TestComputer.java)*/

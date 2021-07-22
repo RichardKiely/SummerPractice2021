@@ -1,4 +1,4 @@
-package Labsheet4.exercise1;
+package Labsheet4.exercise2;
 
 /*Computer class is an instantiable class as we will create an object and call
 an instance of this class in our main  (TestComputer.java)*/
@@ -11,7 +11,7 @@ public class Computer {
     private int RAM;
     private double price;
 
-    // no argument constructor
+   /* // no argument constructor
     public Computer(){
 
         // set attribute default values
@@ -28,7 +28,7 @@ public class Computer {
         setSpeed(speed);
        setRAM(RAM);
        setPrice(price);
-    }
+    }*/
     //accessor methods (often known as "getters")allows us to get the value of the attribute
     public String getManufacturer() {
         return manufacturer;

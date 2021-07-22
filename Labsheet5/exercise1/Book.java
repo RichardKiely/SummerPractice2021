@@ -1,4 +1,4 @@
-package Labsheet4.exercise5;
+package Labsheet5.exercise1;
 
 public class Book {
 
@@ -24,11 +24,7 @@ public class Book {
     }
 
     public void setTitle(String title) {
-        if (title.equals("")) {
-            this.title = " No Valid Title Supplied ";
-        } else {
-            this.title = title;
-        }
+        this.title = title;
     }
 
     public double getPrice() {
@@ -36,9 +32,7 @@ public class Book {
     }
 
     public void setPrice(double price) {
-        if(price > 0 && price < 50000) {
-            this.price = price;
-        }
+        this.price = price;
     }
 
     public String getISBN() {
@@ -46,11 +40,7 @@ public class Book {
     }
 
     public void setISBN(String ISBN) {
-        if (ISBN.equals("")) {
-            this.ISBN = " No Valid ISBN Supplied ";
-        }else{
-            this.ISBN = ISBN;
-        }
+        this.ISBN = ISBN;
     }
 
     public int getPages() {
@@ -58,9 +48,7 @@ public class Book {
     }
 
     public void setPages(int pages) {
-        if(pages >0 && pages < 4000) {
-            this.pages = pages;
-        }
+        this.pages = pages;
     }
 
     @Override

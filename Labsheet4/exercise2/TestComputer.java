@@ -1,6 +1,4 @@
-package Labsheet4.exercise1;
-
-import Labsheet4.exercise1.Computer;
+package Labsheet4.exercise2;
 
 import javax.swing.*;
 
@@ -13,7 +11,7 @@ public class TestComputer {
         output += "Calling the first no-argument Computer constructor. " +
                 "The first Computer object details are : \n\n " + c1.toString();
 
-        Computer c2 = new Computer("Dell","Laptop",3.25,16,550.99);
+       /* Computer c2 = new Computer("Dell","Laptop",3.25,16,550.99);
 
         c2.setSpeed(-3.15);
 
@@ -24,7 +22,7 @@ public class TestComputer {
         Computer c3 = new Computer("Apple", "Tablet",3.65,-16,-500.25);
 
         output += "\n\nCalling the muli-argument Computer constructor. " +
-                "The thrid Computer object details are: \n\n" + c3.toString();
+                "The thrid Computer object details are: \n\n" + c3.toString();*/
 
         JOptionPane.showMessageDialog(null,output,"Computer Object Data",JOptionPane.INFORMATION_MESSAGE);
 
