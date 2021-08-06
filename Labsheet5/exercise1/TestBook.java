@@ -14,20 +14,20 @@ public class TestBook {
        textArea.setText(String.format("%-25s%-9s%-15s%s","Title ","Price ","ISBN","Pages"));
 
 
-       /* Book b1 = new Book();
+       Book b1 = new Book();
 
         output += "Calling the no-argument Book constructor. The first Book object details are: \n\n" + b1.toString();
 
         Book b2 = new Book("The Davinci Code ",19.99,"  3452617232 ",348);
 
-        output += "\n\nCalling the multi-argument Book constructor. The second Book object details are: \n\n" + b2.toString();*/
+        output += "\n\nCalling the multi-argument Book constructor. The second Book object details are: \n\n" + b2.toString();
 
         /* Adding this code to test public and package access
         Computer c1 = new Computer();
 
         System.out.println(c1.getManufacturer());
-            */
 
+/*
         String title = JOptionPane.showInputDialog("Please enter the title of your favourite book");
         double price = Double.parseDouble(JOptionPane.showInputDialog("Please enter the price of your favourite book"));
         String isbn = JOptionPane.showInputDialog("Please enter the ISBN of your favourite book");
@@ -49,7 +49,9 @@ public class TestBook {
         output += String.format("\n\n%-25s%-9.2f%-15s%d",leastFav.getTitle(),leastFav.getPrice(),leastFav.getISBN(),
                 leastFav.getPages());
 
-        textArea.append(output);
-        JOptionPane.showMessageDialog(null,textArea,"Book Object Data",JOptionPane.INFORMATION_MESSAGE);
+
+
+        textArea.append(output);*/
+        JOptionPane.showMessageDialog(null,output,"Book Object Data",JOptionPane.INFORMATION_MESSAGE);
     }
 }

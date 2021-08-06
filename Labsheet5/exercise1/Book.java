@@ -6,6 +6,10 @@ public class Book {
     private double price;
     private String ISBN;
     private int pages;
+    private static int count;
+    private int id;
+
+
 
     public Book(){
 
@@ -17,8 +21,21 @@ public class Book {
         setPrice(price);
        setISBN(ISBN);
         setPages(pages);
+        incrementCount();
+        setId(count);
     }
 
+    private static void incrementCount(){
+        count++;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getTitle() {
         return title;
     }
@@ -54,12 +71,14 @@ public class Book {
     @Override
     public String toString() {
         String str="";
-
         str += " Title: " + getTitle()+
                 " Price: " + getPrice() +
                 " ISBN: " + getISBN() +
-                " Number of Pages: " + getPages();
+                " Number of Pages: " + getPages() +
+                " ID: " + getId();
 
         return str;
     }
+
+
 }
