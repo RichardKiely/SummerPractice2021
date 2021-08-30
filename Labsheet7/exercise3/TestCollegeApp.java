@@ -21,8 +21,8 @@ public class TestCollegeApp {
         creativeMediaStudents[0] = student2;
         creativeMediaStudents[1] = student4;
 
-        Department computingDepartment = new Department("Computing",computingStudents);
         Department creativeMediaDepartment = new Department("Creative Media",creativeMediaStudents);
+        Department computingDepartment = new Department("Computing",computingStudents);
 
         Department departments[] = new Department[5];
         departments[0] = computingDepartment;
@@ -32,6 +32,55 @@ public class TestCollegeApp {
         Institute instituteOfTechnology = new Institute("Institute of Technology, Tralee",departments);
 
         System.out.println(instituteOfTechnology);
+
+        System.out.println("Total students in institute: ");
+        System.out.println(instituteOfTechnology.getTotalStudents());
+
+        System.out.println("\n\nJake now moving from the Computing dept to the Creative Media dept");
+
+        //The following code will move Jake the "easy" way :-)
+        //creativeMediaStudents[2] = s1;
+        //s1.setDept("Creative Media");
+        //computingStudents[0] = null;
+
+        //this does it the hard way!
+
+        int creativeMediaSubscript = -1, computingSubscript = -1;
+
+        for(int i=0; i<departments.length;i++){
+            if(departments[i] != null && departments[i].getName().equals("Creative Media"))
+                creativeMediaSubscript = i;
+
+            if(departments[i] != null && departments[i].getName().equals("Computing"))
+                computingSubscript = i;
+        }
+
+        if(computingSubscript != -1 && creativeMediaSubscript != -1){
+
+            Student [] allDeptStudents = departments[computingSubscript].getStudents();
+
+            int j;
+
+            for(j=0; j<allDeptStudents.length;j++){
+                if(allDeptStudents[j] != null){
+                    if(allDeptStudents[j].getId() == 154345){
+                        System.out.println("\nFound Jake!\n");
+
+                        allDeptStudents[j].setDepartment("Creative Media");
+
+                        departments[creativeMediaSubscript].getStudents()[2] = allDeptStudents[j];
+                        allDeptStudents[j] = null;
+
+                        break;
+                    }
+                }
+            }
+            if(j ==allDeptStudents.length){
+                System.out.println("\nCouldn't find Jake\n");
+            }
+
+            System.out.println(instituteOfTechnology);
+        }
 
 
 

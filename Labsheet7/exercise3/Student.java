@@ -39,7 +39,7 @@ public class Student {
     public String toString() {
         return "ID: " + getId() +
                 " Name: " + getName() +
-                " Department: " + getDepartment();
+                " Department: " + getDepartment() + "\n";
 
     }
 }

@@ -29,7 +29,12 @@ public class Department {
 
     @Override
     public String toString() {
-        return "Departments: " + getName() +
-                " Students: " + Arrays.toString(getStudents());
+        String str = "\nName: " + getName() + "\nList of Students: \n\n";
+
+        for(int i = 0; i< getStudents().length; i++){
+            if(students[i] != null)
+                str += students[i];
+        }
+        return str;
     }
 }
