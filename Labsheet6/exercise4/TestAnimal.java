@@ -9,7 +9,7 @@ also to demonstrate the creation of an array of Animal objects*/
 public class TestAnimal {
 	public static void main( String args[]) {
 
-		Animal allAnimals[] = new Animal[5];
+		Animal allAnimals[] = new Animal[10];
 
 	    System.out.println("Calling the no-argument constructor to create the first animal....");
 		Animal animal1 = new Animal(); //tests no-arg constructor
@@ -43,6 +43,7 @@ public class TestAnimal {
 		System.out.println("\n\nThe details of all the animals in the Animal array are:\n\n");
 
 		for(int i=0;i<allAnimals.length;i++)
+			if(allAnimals[i] != null)
 			System.out.println(allAnimals[i]+"\n\n");
 
 	}
