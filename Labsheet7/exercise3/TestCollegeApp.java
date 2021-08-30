@@ -10,18 +10,28 @@ public class TestCollegeApp {
         Student student4 = new Student("Peter",323456,"Creative Media");
 
        Student computingStudents[] = new Student[10];
-        Student creativeMedia[] = new Student[10];
+        Student creativeMediaStudents[] = new Student[10];
 
         //computing students
         computingStudents[0] = student1;
+
         computingStudents[1] = student3;
 
         //creative media students
-        creativeMedia[0] = student2;
-        creativeMedia[1] = student4;
+        creativeMediaStudents[0] = student2;
+        creativeMediaStudents[1] = student4;
 
         Department computingDepartment = new Department("Computing",computingStudents);
-        Department creativeMediaDepartment = new Department("Creative Media",creativeMedia);
+        Department creativeMediaDepartment = new Department("Creative Media",creativeMediaStudents);
+
+        Department departments[] = new Department[5];
+        departments[0] = computingDepartment;
+        departments[1] = creativeMediaDepartment;
+
+
+        Institute instituteOfTechnology = new Institute("Institute of Technology, Tralee",departments);
+
+        System.out.println(instituteOfTechnology);
 
 
 
